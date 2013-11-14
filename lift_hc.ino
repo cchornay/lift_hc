@@ -148,7 +148,7 @@ void loop() {
     } else {
       // hovercraft already started the course and is lost
       // so go back to previous state
-      // TO BE IMPLEMENTED
+      // TO BE IMPLEMENTED (after preliminary testing)
     }
     Serial.print("none, previous state:");
     Serial.println(previousState);
@@ -238,9 +238,45 @@ boolean isTargetReached() {
   return getDistance() < AT_PEDESTAL_THRESHOLD;
 }
 
-void enablePayloadSystem() {
- // TO BE IMPLEMENTED 
-}
+void enablePayloadSystem() { 
+/* # define BIN_ONE 1
+ # define BIN_ONE 2
+ # define BIN_ONE 3
+ # define BIN_ONE 4
+
+ if (isTargetReached = true) {
+  delay(500);
+  //recall RF sensor bin identification
+  int bin = RF_SENSOR_OUTPUT;
+  switch (bin) {
+   case BIN_ONE:
+   //rotate Motor1 to bin 1
+   PAYLOAD_ROTATE_MOTOR = 
+   delay(1000);
+    break;
+   
+   case BinTwo:
+   //rotate Motor1 to bin 2
+   PAYLOAD_ROTATE_MOTOR = 
+   delay(1000);
+    break;
+   
+   case binThree:
+   //rotate Motor1 to bin 3
+   PAYLOAD_ROTATE_MOTOR = 
+   delay(1000);
+    break;
+    
+   case binFour:
+   //rotate Motor1 to bin 4
+   PAYLOAD_ROTATE_MOTOR = 
+   delay(1000);
+    break;
+  }
+  //drop it
+  
+  //lift arm */
+ }
 
 void setPWMPins() {
   pinMode(LEVITATION_FAN, OUTPUT);
